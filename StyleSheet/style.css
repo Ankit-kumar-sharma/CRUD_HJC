@@ -1,0 +1,21 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+}
+main section
+{
+    width: 34%;
+    height: 90%;
+    border: 1px solid black;
+}
