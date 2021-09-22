@@ -89,3 +89,22 @@ label
     color: white;
 
 }
+@media (max-width:850px)
+{
+    main section
+    {
+        width: 95%;
+        height: 100%;
+        box-shadow: none;
+        border: none;
+        margin-bottom: 50px;
+    }
+    input[type=text]:focus
+    {
+        width: 95%;
+    }
+    input[type=password]:focus
+    {
+        width: 95%;
+    } 
+}
