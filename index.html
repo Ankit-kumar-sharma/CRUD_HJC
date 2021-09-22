@@ -6,19 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUD_Demo</title>
     <link rel="stylesheet" href="./StyleSheet/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
     <main>
       <section>
-        <label for="rollNumber">Enrollment Number</label>
-        <input type="text" name="rollNumber" id="rollNumber" />
-        <label for="fullName">Name</label>
-        <input type="text" name="fullName" id="fullName" />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password"/>
-        <label for="address">Address</label>
-        <input type="text" name="address" id="address"/>
+        <label for="rollNumber"><i class="fa fa-id-card-o"></i></label>
+        <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter Enrollment"/>
+        <label for="fullName"><i class="fa fa-users"></i></label>
+        <input type="text" name="fullName" id="fullName" placeholder="Enter Name"/>
+        <label for="password"><i class="fa fa-eye"></i></label>
+        <input type="password" name="password" id="password" placeholder="Enter Password"/>
+        <label for="address"><i class="fa fa-address-book-o"></i></label>
+        <input type="text" name="address" id="address" placeholder="Enter Address"/>
+      <div class="container">
+        <button id="insert">Insert</button>
+        <button id="delete">Delete</button>
+        <button id="read">Read</button>
+        <button id="update">Update</button>
+      </div>
       </section>
     </main>
+    <script src="./config.js"></script>
+    <script src="./JavaScript/script.js"></script>
   </body>
 </html>

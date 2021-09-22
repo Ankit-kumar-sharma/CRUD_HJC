@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 *
 {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 main
 {
@@ -11,6 +13,10 @@ main
     align-items: center;
     width: 100%;
     height: 100vh;
+    background-image: url(../Image/user_back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
     /* border: 1px solid black; */
 }
 main section
@@ -20,7 +26,7 @@ main section
     width: 34%;
     height: 90%;
     border: 1px solid #bfbfbf;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 }
 input[type=text],input[type=password]
 {
@@ -28,15 +34,58 @@ input[type=text],input[type=password]
     /* color: purple; */
     font-size: 18px;
     padding: 5px;
-
     display: block;
     margin: auto;
-    width: 80%;
+    width: 50%;
     height: 34px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition-property: width;
+    transition-duration: 1s;
+    border: none;
+    background-color:rgba(0, 0, 0, 0);
+    border-bottom: 1px solid blue;
+}
+input[type=text]:focus
+{
+    width: 80%;
+}
+input[type=password]:focus
+{
+    width: 80%;
 }
 label
 {
-    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+    font-size: 25px;
+}
+.container
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+    /* border: 1px solid black; */
+    height: 50px;
+}
+.container button
+{
+    background-color: white;
+    color: black;
+    width: 110px;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+.container button:hover
+{
+    background-color: blue;
+    color: white;
+
 }
