@@ -15,8 +15,28 @@ main
 }
 main section
 {
+    text-align: center;
+    padding-top: 50px;
     width: 34%;
     height: 90%;
     border: 1px solid #bfbfbf;
     box-shadow: 10px 10px 5px #aaaaaa;
+}
+input[type=text],input[type=password]
+{
+    outline: none;
+    /* color: purple; */
+    font-size: 18px;
+    padding: 5px;
+
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 34px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+label
+{
+    font-size: 20px;
 }
