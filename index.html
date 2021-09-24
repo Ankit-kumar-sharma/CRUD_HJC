@@ -11,14 +11,16 @@
   <body>
     <main>
       <section>
+        <form action="">  
         <label for="rollNumber"><i class="fa fa-id-card-o"></i></label>
-        <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter Enrollment"/>
+        <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter Enrollment" required/>
         <label for="fullName"><i class="fa fa-users"></i></label>
-        <input type="text" name="fullName" id="fullName" placeholder="Enter Name"/>
-        <label for="password"><i class="fa fa-eye"></i></label>
-        <input type="password" name="password" id="password" placeholder="Enter Password"/>
+        <input type="text" name="fullName" id="fullName" placeholder="Enter Name" required/>
+        <label for="password" onclick="showPass()"><i class="fa fa-eye" id="eyeD"></i></label>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required/>
         <label for="address"><i class="fa fa-address-book-o"></i></label>
-        <input type="text" name="address" id="address" placeholder="Enter Address"/>
+        <input type="text" name="address" id="address" placeholder="Enter Address" required/>
+      </form>
       <div class="container">
         <button id="insert">Insert</button>
         <button id="delete">Delete</button>
@@ -27,7 +29,24 @@
       </div>
       </section>
     </main>
-    <script src="./config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="./JavaScript/script.js"></script>
+    <script src="./config.js"></script>
+    <script>
+      function showPass()
+      {
+        if(document.getElementById("eyeD").className==="fa fa-eye")
+        {
+          document.getElementById("eyeD").className="fa fa-eye-slash";
+          document.getElementById("password").type="text";
+        }
+        else
+        {
+          document.getElementById("eyeD").className="fa fa-eye";
+          document.getElementById("password").type="password";
+          
+        }
+      }
+    </script>
   </body>
 </html>
