@@ -12,14 +12,14 @@
     <main>
       <section>
         <form action="">  
-        <label for="rollNumber"><i class="fa fa-id-card-o"></i></label>
-        <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter Enrollment" required/>
-        <label for="fullName"><i class="fa fa-users"></i></label>
-        <input type="text" name="fullName" id="fullName" placeholder="Enter Name" required/>
+        <label for="rollNumber"><i class="fa fa-id-card-o" id="card"></i></label>
+        <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter Enrollment" required onmouseover="changeName1()" onmouseout="sameName()" autocomplete="off"/>
+        <label for="fullName"><i class="fa fa-users" id="user"></i></label>
+        <input type="text" name="fullName" id="fullName" placeholder="Enter Name" required onmouseover="changeName2()" onmouseout="sameName()" autocomplete="off"/>
         <label for="password" onclick="showPass()"><i class="fa fa-eye" id="eyeD"></i></label>
         <input type="password" name="password" id="password" placeholder="Enter Password" required/>
-        <label for="address"><i class="fa fa-address-book-o"></i></label>
-        <input type="text" name="address" id="address" placeholder="Enter Address" required/>
+        <label for="address"><i class="fa fa-address-book-o" id="book"></i></label>
+        <input type="text" name="address" id="address" placeholder="Enter Address" required onmouseover="changeName3()" onmouseout="sameName()" autocomplete="off"/>
       </form>
       <div class="container">
         <button id="insert">Insert</button>
@@ -46,6 +46,36 @@
           document.getElementById("password").type="password";
           
         }
+      }
+      function changeName1()
+      {
+        document.getElementById('rollNumber').placeholder="";
+        document.getElementById('card').innerHTML=" Enter enrollment";
+        document.getElementById('card').style="font-family: 'Quicksand', sans-serif;";
+      }
+      function changeName2()
+      {
+        document.getElementById('fullName').placeholder="";
+        document.getElementById('user').innerHTML=" Enter username";
+        document.getElementById('user').style="font-family: 'Quicksand', sans-serif;";
+      }
+      function changeName3()
+      {
+        document.getElementById('address').placeholder="";
+        document.getElementById('book').innerHTML=" Enter address";
+        document.getElementById('book').style="font-family: 'Quicksand', sans-serif;";
+      }
+      function sameName() {
+        document.getElementById('rollNumber').placeholder="Enter enrollment";
+        document.getElementById('address').placeholder="Enter address";
+        document.getElementById('fullName').placeholder="Enter username";
+        document.getElementById('card').style="";
+        document.getElementById('card').innerHTML="";
+        document.getElementById('book').innerHTML="";
+        document.getElementById('book').style="";
+        document.getElementById('user').innerHTML="";
+        document.getElementById('user').style="";
+
       }
     </script>
   </body>
